@@ -1,8 +1,9 @@
-import { Index } from './views'
+import { Main, Contacts } from './views'
 
 const routes =
   [
-    { path:'/', component: Index },
+    { path:'/', component: Main },
+    { path:'/contacts', component: Contacts },
   ]
 
 export default routes 

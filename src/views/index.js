@@ -1,3 +1,4 @@
 import Main from './Main'
+import Contacts from './Contacts'
 
-export { Main }
+export { Main, Contacts }
