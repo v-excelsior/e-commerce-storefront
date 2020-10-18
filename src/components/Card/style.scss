@@ -1,0 +1,70 @@
+@import "../../styles/vars";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &-head {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &-label{
+    max-width: 80%;
+    text-align: center;
+    font-size: 20px;
+    padding: 6px;
+    position: absolute;
+    background-color: $main-light;
+    color: $text-secondary;
+
+    &__name {
+      border-top-left-radius: 12px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &__price {
+      bottom: 0;
+      right:0;
+      border-top-left-radius: 8px;
+    }
+  }
+
+  &-description{
+    &::-webkit-scrollbar {
+      width: 4px;
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin: 2px 0;
+      background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+
+      background: $main-light;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $main-dark;
+    }
+
+    height: 120px;
+    overflow-y:auto;
+    margin: 6px;
+    padding:6px;
+    text-align: justify;
+  }
+
+  &-image {
+    max-height: 280px;
+    object-fit: cover;
+  }
+}

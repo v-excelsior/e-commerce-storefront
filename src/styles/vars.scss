@@ -1,0 +1,14 @@
+//Color schema
+$main: #4CAF50;
+
+$main-light: lighten($main, 10%);
+$main-dark: darken($main, 10%);
+
+$text-primary: black;
+$text-secondary: whitesmoke;
+
+//Media breakpoints
+$S: 480px;
+$M: 767px;
+$L: 992px;
+$xl: 1280px;

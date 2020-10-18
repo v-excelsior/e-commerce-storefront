@@ -1,0 +1,19 @@
+@import 'src/styles/vars';
+@import 'src/styles/mixins/media';
+
+.header {
+  background-color: $main;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  &-company-name {
+    color: $text-secondary;
+    font-size: 28px;
+    font-weight: bold;
+
+    @include screen('max', $M) {
+      font-size: 20px;
+    }
+  }
+}
