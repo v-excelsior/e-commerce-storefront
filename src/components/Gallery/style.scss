@@ -1,5 +1,16 @@
-.cards-list{
+@import "src/styles/vars";
+@import "src/styles/mixins/media";
+
+.cards-list {
   display: grid;
   align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  @include screen('max', $M) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  @include screen('max', $S) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
