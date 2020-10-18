@@ -25,9 +25,11 @@ const Card = (props) => {
         </span>
       </div>
 
-      <span className="card-description" style={{ textAlign: description ? '' : 'center' }}>
-        { description || 'No data :(' }
-      </span>
+      { description && (
+        <span className="card-description">
+          { description }
+        </span>
+      ) }
     </div>
   )
 }
