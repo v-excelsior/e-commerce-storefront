@@ -1,3 +1,3 @@
 ### Work in progress
 
-### Blueprint what helps create a storefront with admin panel
+## Blueprint what helps create a storefront with admin panel
