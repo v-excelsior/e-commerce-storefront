@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-company-name">
-        { CONFIG.name }
+        { CONFIG.appName }
       </div>
     </header>
   )

@@ -14,4 +14,4 @@ ReactDOM.render(
   root
 )
 
-document.title = CONFIG.name
+document.title = CONFIG.appName

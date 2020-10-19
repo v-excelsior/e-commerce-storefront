@@ -1,6 +1,7 @@
 const CONFIG = {
-  name       : 'My Awesome Shop',
   currency   : 'грн.',
+  email      : 'test@test.com',
+  appName    : 'My Awesome Shop',
   firebaseURL: 'https://v-e-commerce-template.firebaseio.com',
 }
 
