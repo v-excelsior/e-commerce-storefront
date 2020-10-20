@@ -6,11 +6,14 @@ const Contacts = () => {
   return (
     <div className="contacts">
       <Link to='/home'>Route</Link>
-      <Link to='/home'/>
+      <Link to='/home' />
+      <hr />
       <Link to='/'>Route</Link>
-      <Link to='/'/>
-      <Link mail>My email</Link>
-      <Link mail></Link>
+      <Link to='/' />
+      <hr />
+      <Link email>My email</Link>
+      <Link email/>
+      <hr />
       <Link href='www.google.com'>Some text</Link>
       <Link href='www.google.com'/>
     </div>

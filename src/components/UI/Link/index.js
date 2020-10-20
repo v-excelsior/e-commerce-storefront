@@ -8,11 +8,17 @@ const Link = (props) => {
 
   const { to, email, href, type } = props
 
+  console.log('to', to, props.children)
+
   const renderLink = () => {
     if (to) {
-        return (
-        <RouteLink exact to={ to }>
-          { props.children || to === '/' ? 'Empty link' : to.replace(/\//, '') }
+      return (
+        <RouteLink exact="true" to={ to }>
+          { props.children || (
+            to === '/'
+              ? 'Empty link'
+              : to.replace(/\//, '')
+          ) }
         </RouteLink>
       )
     }
@@ -28,7 +34,7 @@ const Link = (props) => {
     if (href) {
       return (
         <a href={ href } target="_blank" rel="noopener noreferrer">
-          { props.children || null }
+          { props.children || href }
         </a>
       )
     }
