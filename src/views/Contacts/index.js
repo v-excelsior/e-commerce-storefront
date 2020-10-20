@@ -5,7 +5,7 @@ import { Link } from '../../components/UI'
 const Contacts = () => {
   return (
     <div className="contacts">
-      <Link to='/home'>Route</Link>
+      <Link to='/home' className={ ['hoo', 'gaa'] }>Route</Link>
       <Link to='/home' />
       <hr />
       <Link to='/'>Route</Link>
