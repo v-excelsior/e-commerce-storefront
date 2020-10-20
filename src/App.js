@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Header } from './components/UI'
 
-import { Main } from './views'
-import { Contacts } from './views'
+import routes from './routes'
 
 const App = () => {
   return (
@@ -12,12 +11,15 @@ const App = () => {
       <Header />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route exact path="/contacts">
-            <Contacts />
-          </Route>
+          {
+            routes.map((route, i) => {
+              return (
+                <Route exact path={ route.path } key={ i }>
+                  { React.createElement(route.component) }
+                </Route>
+              )
+            })
+          }
         </Switch>
       </Router>
     </div>
