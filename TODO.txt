@@ -1,2 +1,4 @@
 defined themes
 theme configurator - page with vars.css file generator
+
+Copy to buffer for tel/mail/other contacts
