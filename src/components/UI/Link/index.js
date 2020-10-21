@@ -9,7 +9,7 @@ const getClasses = (type, className) => {
   const classes = ['link']
 
   if (type) {
-    classes.push(type)
+    classes.push('link-' + type)
   }
 
   if (className?.length) {
@@ -31,11 +31,7 @@ const Link = (props) => {
           to={ to }
           className={ getClasses(type, className) }
         >
-          { props.children || (
-            to === '/'
-              ? 'Empty link'
-              : to.replace(/\//, '')
-          ) }
+          { props.children || to.replace(/\//, '') }
         </RouteLink>
       )
     }

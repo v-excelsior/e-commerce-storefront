@@ -1,5 +1,22 @@
 @import 'src/styles/vars';
 
 .link {
+  transition: 0.2s;
   color: $main;
+
+  &:hover {
+    color: darken($main, 20%);
+  }
+
+  &-block {
+    color: #FFF;
+    background-color: $main;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 3px 6px;
+
+    &:hover {
+      color: #DDD;
+    }
+  }
 }
