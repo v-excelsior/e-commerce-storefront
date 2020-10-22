@@ -8,8 +8,8 @@ import routes from './routes'
 const App = () => {
   return (
     <div className="app">
-      <Header />
       <Router>
+      <Header />
         <div className="container">
           <Switch>
             {
