@@ -3,6 +3,8 @@
 .link {
   transition: 0.2s;
   color: $main;
+  cursor: pointer;
+  text-decoration: underline;
 
   &:hover {
     color: $main-dark;
