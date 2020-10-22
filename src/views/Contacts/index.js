@@ -14,35 +14,37 @@ const Contacts = () => {
   return (
     <div className="contacts">
       <table className="contacts-table">
-        <tr className="contact">
-          <td className={ ct }>Email</td>
-          <td className={ cd }><Link email /></td>
-        </tr>
+        <tbody>
+          <tr className="contact">
+            <td className={ ct }>Email</td>
+            <td className={ cd }><Link email /></td>
+          </tr>
 
-        <tr className="contact">
-          <td className={ ct }>Telephone</td>
-          <td className={ cd + 'contact-data--telephone' }>{ telephone }</td>
-          {/*  need add copy to buffer*/ }
-        </tr>
+          <tr className="contact">
+            <td className={ ct }>Telephone</td>
+            <td className={ cd + 'contact-data__telephone' }>{ telephone }</td>
+            {/*  need add copy to buffer*/ }
+          </tr>
 
-        <tr className="contact">
-          <td className={ ct }>Address</td>
-          <td className={ cd }>
-            <Link href={ 'https://google.com/maps/search/' + address }>
-              { address }
-            </Link>
-          </td>
-          {/*  link what open address on the map*/ }
-        </tr>
+          <tr className="contact">
+            <td className={ ct }>Address</td>
+            <td className={ cd }>
+              <Link href={ 'https://maps.google.com/' + address }>
+                { address }
+              </Link>
+            </td>
+            {/*  link what open address on the map*/ }
+          </tr>
 
-        { otherContacts?.length && otherContacts.map(
-          (contact, i) => (
-            <tr className="contact" key={ i }>
-              <td className={ ct }>{ contact.type }</td>
-              <td className={ cd }>{ contact.data }</td>
-            </tr>
-          )
-        ) }
+          { otherContacts?.length && otherContacts.map(
+            (contact, i) => (
+              <tr className="contact" key={ i }>
+                <td className={ ct }>{ contact.type }</td>
+                <td className={ cd }>{ contact.data }</td>
+              </tr>
+            )
+          ) }
+        </tbody>
       </table>
     </div>
   )

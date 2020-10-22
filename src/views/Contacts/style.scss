@@ -3,9 +3,12 @@
 
 .contacts {
   font-size: 24px;
-  background-color: red;
   margin: 30px auto 0;
   max-width: 720px;
+
+  @include screen('max', $M) {
+    font-size: 18px;
+  }
 
   @include screen('max', $S) {
     margin: 10px auto 0;
@@ -14,8 +17,29 @@
 }
 
 .contacts-table {
+  border-spacing: 12px;
+
+  @include screen('max', $M) {
+    border-spacing: 6px;
+  }
+
+  @include screen('max', $S) {
+    border-spacing: 3px;
+  }
+
   &-cell {
+    border-radius: 6px;
+    border-spacing: 30px;
+    border: 2px solid $main;
     padding: 10px;
+
+    @include screen('max', $M) {
+      padding: 6px;
+    }
+
+    @include screen('max', $S) {
+      padding: 4px;
+    }
   }
 
   .contact {
@@ -23,11 +47,20 @@
   }
 
   .contact-type {
+    background-color: $main;
+    text-align: center;
+    color:#FFF;
     width: 30%;
+    min-width: 120px;
   }
 
   .contact-data {
     width: 70%;
     text-align: right;
+
+    &__telephone{
+      color:$main;
+      text-decoration: underline;
+    }
   }
 }
