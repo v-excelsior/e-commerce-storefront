@@ -10,17 +10,19 @@ const App = () => {
     <div className="app">
       <Header />
       <Router>
-        <Switch>
-          {
-            routes.map((route, i) => {
-              return (
-                <Route exact path={ route.path } key={ i }>
-                  { React.createElement(route.component) }
-                </Route>
-              )
-            })
-          }
-        </Switch>
+        <div className="container">
+          <Switch>
+            {
+              routes.map((route, i) => {
+                return (
+                  <Route exact path={ route.path } key={ i }>
+                    { React.createElement(route.component) }
+                  </Route>
+                )
+              })
+            }
+          </Switch>
+        </div>
       </Router>
     </div>
   )

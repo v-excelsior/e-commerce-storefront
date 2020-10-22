@@ -1,0 +1,33 @@
+@import 'src/styles/vars';
+@import 'src/styles/mixins/media';
+
+.contacts {
+  font-size: 24px;
+  background-color: red;
+  margin: 30px auto 0;
+  max-width: 720px;
+
+  @include screen('max', $S) {
+    margin: 10px auto 0;
+    font-size: 14px;
+  }
+}
+
+.contacts-table {
+  &-cell {
+    padding: 10px;
+  }
+
+  .contact {
+
+  }
+
+  .contact-type {
+    width: 30%;
+  }
+
+  .contact-data {
+    width: 70%;
+    text-align: right;
+  }
+}

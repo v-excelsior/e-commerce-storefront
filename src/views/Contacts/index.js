@@ -6,42 +6,43 @@ import { Link } from '../../components/UI'
 import CONFIG from '../../config'
 
 const Contacts = () => {
+  const { otherContacts, address, telephone } = CONFIG.contacts
+
+  const ct = 'contacts-table-cell contact-type '
+  const cd = 'contacts-table-cell contact-data '
+
   return (
-    <div className="container contacts">
+    <div className="contacts">
       <table className="contacts-table">
-        <tr>
-          <td>Email</td>
-          <td><Link email /></td>
+        <tr className="contact">
+          <td className={ ct }>Email</td>
+          <td className={ cd }><Link email /></td>
         </tr>
 
-        <tr>
-          <td>Number</td>
-          <td>8800-300-200</td>
-        {/*  need add copy to buffer*/}
+        <tr className="contact">
+          <td className={ ct }>Telephone</td>
+          <td className={ cd + 'contact-data--telephone' }>{ telephone }</td>
+          {/*  need add copy to buffer*/ }
         </tr>
 
-        <tr>
-          <td>Address</td>
-          <td>My address</td>
-        {/*  link what open address on the map*/}
+        <tr className="contact">
+          <td className={ ct }>Address</td>
+          <td className={ cd }>
+            <Link href={ 'https://google.com/maps/search/' + address }>
+              { address }
+            </Link>
+          </td>
+          {/*  link what open address on the map*/ }
         </tr>
 
-        { CONFIG.otherContacts?.length && CONFIG.otherContacts.map(
+        { otherContacts?.length && otherContacts.map(
           (contact, i) => (
-            <tr key={ i }>
-              <td>{ contact.name }</td>
-              <td>{ contact.data }</td>
+            <tr className="contact" key={ i }>
+              <td className={ ct }>{ contact.type }</td>
+              <td className={ cd }>{ contact.data }</td>
             </tr>
           )
         ) }
-        <Link type='block' to='/home' className={ ['hoo', 'gaa'] }>Route</Link>
-        <Link to='/home' />
-        <Link to='/'>Route</Link>
-        <Link to='/' />
-        <Link email>My email</Link>
-
-        <Link href='www.google.com'>Some text</Link>
-        <Link href='www.google.com' />
       </table>
     </div>
   )

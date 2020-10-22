@@ -5,7 +5,7 @@
   color: $main;
 
   &:hover {
-    color: darken($main, 20%);
+    color: $main-dark;
   }
 
   &-block {

@@ -39,12 +39,12 @@ const Link = (props) => {
     if (email) {
       return (
         <a
-          href={ `mailto:${ CONFIG.email }` }
+          href={ `mailto:${ CONFIG.contacts.email }` }
           target="_blank"
           rel="noopener noreferrer"
           className={ getClasses(type, className) }
         >
-          { props.children || CONFIG.email }
+          { props.children || CONFIG.contacts.email }
         </a>
       )
     }
