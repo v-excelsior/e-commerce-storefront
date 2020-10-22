@@ -6,7 +6,7 @@ import { Link } from '../../components/UI'
 import CONFIG from '../../config'
 
 const Contacts = () => {
-  const { otherContacts, address, telephone } = CONFIG.contacts
+  const { otherContacts, address, telephone, email } = CONFIG.contacts
 
   const ct = 'contacts-table-cell contact-type '
   const cd = 'contacts-table-cell contact-data '
@@ -32,30 +32,36 @@ const Contacts = () => {
     <div className="contacts">
       <table className="contacts-table">
         <tbody>
-        <tr className="contact">
-          <td className={ ct }>Email</td>
-          <td className={ cd }><Link email /></td>
-        </tr>
+        { email && (
+          <tr className="contact">
+            <td className={ ct }>Email</td>
+            <td className={ cd }><Link email /></td>
+          </tr>
+        ) }
 
-        <tr
-          onClick={ () => someMethod() }
-          className="contact"
-        >
-          <td className={ ct }>Telephone</td>
-          <td className={ cd + 'contact-data__telephone link' }>
-            { telephone }
-          </td>
-        </tr>
+        { telephone && (
+          <tr
+            onClick={ () => someMethod() }
+            className="contact"
+          >
+            <td className={ ct }>Telephone</td>
+            <td className={ cd + 'contact-data__telephone link' }>
+              { telephone }
+            </td>
+          </tr>
+        ) }
 
-        <tr className="contact">
-          <td className={ ct }>Address</td>
-          <td className={ cd }>
-            {/*  why link not opened with address?*/ }
-            <Link href={ 'https://google.com/maps/search/' + address.replace(/\s/g, '+') }>
-              { address }
-            </Link>
-          </td>
-        </tr>
+        { address && (
+          <tr className="contact">
+            <td className={ ct }>Address</td>
+            <td className={ cd }>
+              {/*  why link not opened with address?*/ }
+              <Link href={ 'https://google.com/maps/search/' + address.replace(/\s/g, '+') }>
+                { address }
+              </Link>
+            </td>
+          </tr>
+        ) }
 
         { otherContacts?.length && otherContacts.map(
           (contact, i) => (
@@ -65,7 +71,7 @@ const Contacts = () => {
             </tr>
           )
         ) }
-      </tbody>
+        </tbody>
       </table>
     </div>
   )
