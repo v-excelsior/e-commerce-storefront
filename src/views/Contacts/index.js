@@ -26,6 +26,32 @@ const Contacts = () => {
     document.execCommand('copy')
 
     copyBlock.remove()
+
+    const wrapper = document.createElement('div')
+
+    wrapper.style.cssText = `
+      position: absolute;
+      height:100vh;
+      width:100vw;
+      top:0;
+      left:0;
+      background-color: green;
+    `
+    const plashka = document.createElement('div')
+
+    plashka.textContent = 'Copied!'
+
+    plashka.style.cssText = `
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0px;
+      background-color: gray;
+    `
+
+    wrapper.appendChild(plashka)
+
+    document.body.appendChild(wrapper)
   }
 
   return (
