@@ -27,29 +27,19 @@ const Contacts = () => {
 
     copyBlock.remove()
 
-    const wrapper = document.createElement('div')
+    const bubblingOverlay = document.createElement('div')
 
-    wrapper.style.cssText = `
-      position: fixed;
-      width:100vw;
-      top:0;
-      bottom:0;
-      left:0;
-      background-color: green;
-      transition:3s;
-    `
+    bubblingOverlay.classList.add('bubbling-overlay')
 
-    document.body.appendChild(wrapper)
+    document.body.appendChild(bubblingOverlay)
 
     const bubble = document.createElement('div')
 
     bubble.textContent = 'Copied!'
 
-    bubble.style.cssText = `
+    bubble.classList.add('bubble')
 
-    `
-
-    wrapper.appendChild(bubble)
+    bubblingOverlay.appendChild(bubble)
 
     setTimeout(() => {
       bubble.classList.add('bubbling')
@@ -57,7 +47,7 @@ const Contacts = () => {
 
     setTimeout(() => {
       bubble.classList.remove('bubbling')
-    }, 5000)
+    }, 2000)
   }
 
   return (

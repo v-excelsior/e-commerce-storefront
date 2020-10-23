@@ -1,13 +1,22 @@
-.bubble{
-  position: absolute;
-  left: 50%;
+.bubbling-overlay {
+  position: fixed;
+  width: 100vw;
+  top: 0;
   bottom: 0;
-  transform: translate(-50%,150%);
-  transition:1s;
-  background-color: gray;
+  left: 0;
+  background-color: green;
+  transition: 3s;
 
-  &.bubbling{
-    transform: translate(-50%,-150%);
+  .bubble {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 150%);
+    transition: 1s;
+    background-color: gray;
+
+    &.bubbling {
+      transform: translate(-50%, -150%);
+    }
   }
 }
-
