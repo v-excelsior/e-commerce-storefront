@@ -47,16 +47,19 @@ const Contacts = () => {
 
     plashka.style.cssText = `
       position: absolute;
-      visibility:hidden;
       left: 50%;
       transform: translateX(-50%);
       bottom: 0px;
+      transition:1s;
       background-color: gray;
     `
 
     wrapper.appendChild(plashka)
 
-    plashka.style.visibility = 'visible'
+    plashka.classList.add('bubbling')
+    setTimeout(() => {
+      plashka.classList.remove('bubbling')
+    }, 5000)
   }
 
   return (
