@@ -30,19 +30,24 @@ const Contacts = () => {
     const wrapper = document.createElement('div')
 
     wrapper.style.cssText = `
-      position: absolute;
-      height:100vh;
+      position: fixed;
       width:100vw;
       top:0;
+      bottom:0;
       left:0;
       background-color: green;
+      transition:3s;
     `
+
+    document.body.appendChild(wrapper)
+
     const plashka = document.createElement('div')
 
     plashka.textContent = 'Copied!'
 
     plashka.style.cssText = `
       position: absolute;
+      visibility:hidden;
       left: 50%;
       transform: translateX(-50%);
       bottom: 0px;
@@ -51,7 +56,7 @@ const Contacts = () => {
 
     wrapper.appendChild(plashka)
 
-    document.body.appendChild(wrapper)
+    plashka.style.visibility = 'visible'
   }
 
   return (
