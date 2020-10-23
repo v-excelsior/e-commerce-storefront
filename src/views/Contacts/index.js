@@ -3,6 +3,9 @@ import './style.scss'
 
 import { Link } from '../../components/UI'
 
+import bubbleMessage from 'src/helpers/bubbleMessage'
+import { onlyNumbers } from '~/src/helpers'
+
 import CONFIG from '../../config'
 
 const Contacts = () => {
@@ -10,45 +13,6 @@ const Contacts = () => {
 
   const ct = 'contacts-table-cell contact-type '
   const cd = 'contacts-table-cell contact-data '
-
-  const someMethod = () => {
-    //need refactoring and improvement
-    const input = document.createElement('input')
-    input.id = 'copyBlock'
-    document.body.appendChild(input)
-
-    const copyBlock = document.querySelector('#copyBlock')
-    copyBlock.value = 'some text' + Math.random()
-
-    copyBlock.select()
-    copyBlock.setSelectionRange(0, 99999)
-
-    document.execCommand('copy')
-
-    copyBlock.remove()
-
-    const bubblingOverlay = document.createElement('div')
-
-    bubblingOverlay.classList.add('bubbling-overlay')
-
-    document.body.appendChild(bubblingOverlay)
-
-    const bubble = document.createElement('div')
-
-    bubble.textContent = 'Copied!'
-
-    bubble.classList.add('bubble')
-
-    bubblingOverlay.appendChild(bubble)
-
-    setTimeout(() => {
-      bubble.classList.add('bubbling')
-    }, 0)
-
-    setTimeout(() => {
-      bubble.classList.remove('bubbling')
-    }, 2000)
-  }
 
   return (
     <div className="contacts">
@@ -62,8 +26,9 @@ const Contacts = () => {
         ) }
 
         { telephone && (
+          //TODO: trim telephone
           <tr
-            onClick={ () => someMethod() }
+            onClick={ () => bubbleMessage(onlyNumbers(telephone)) }
             className="contact"
           >
             <td className={ ct }>Telephone</td>
