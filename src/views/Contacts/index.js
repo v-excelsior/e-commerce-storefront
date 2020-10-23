@@ -41,24 +41,22 @@ const Contacts = () => {
 
     document.body.appendChild(wrapper)
 
-    const plashka = document.createElement('div')
+    const bubble = document.createElement('div')
 
-    plashka.textContent = 'Copied!'
+    bubble.textContent = 'Copied!'
 
-    plashka.style.cssText = `
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0px;
-      transition:1s;
-      background-color: gray;
+    bubble.style.cssText = `
+
     `
 
-    wrapper.appendChild(plashka)
+    wrapper.appendChild(bubble)
 
-    plashka.classList.add('bubbling')
     setTimeout(() => {
-      plashka.classList.remove('bubbling')
+      bubble.classList.add('bubbling')
+    }, 0)
+
+    setTimeout(() => {
+      bubble.classList.remove('bubbling')
     }, 5000)
   }
 

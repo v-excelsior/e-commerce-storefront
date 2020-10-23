@@ -1,0 +1,13 @@
+.bubble{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,150%);
+  transition:1s;
+  background-color: gray;
+
+  &.bubbling{
+    transform: translate(-50%,-150%);
+  }
+}
+
