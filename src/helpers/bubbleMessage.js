@@ -1,19 +1,4 @@
 const bubbleMessage = (message, delay = 2000) => {
-
-  const input = document.createElement('input')
-  input.id = 'copyBlock'
-  document.body.appendChild(input)
-
-  const copyBlock = document.querySelector('#copyBlock')
-  copyBlock.value = 'some text' + Math.random()
-
-  copyBlock.select()
-  copyBlock.setSelectionRange(0, 99999)
-
-  document.execCommand('copy')
-
-  copyBlock.remove()
-
   const bubblingOverlay = document.createElement('div')
 
   bubblingOverlay.classList.add('bubbling-overlay')

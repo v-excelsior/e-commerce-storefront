@@ -2,9 +2,7 @@ import React from 'react'
 import './style.scss'
 
 import { Link } from '../../components/UI'
-
-import bubbleMessage from 'src/helpers/bubbleMessage'
-import { onlyNumbers } from '~/src/helpers'
+import { onlyNumbers, bubbleMessage, copyToClipboard } from '../../helpers'
 
 import CONFIG from '../../config'
 
@@ -13,6 +11,11 @@ const Contacts = () => {
 
   const ct = 'contacts-table-cell contact-type '
   const cd = 'contacts-table-cell contact-data '
+
+  const copyNumber = () => {
+    copyToClipboard(onlyNumbers(telephone))
+    bubbleMessage('d.copy')
+  }
 
   return (
     <div className="contacts">
@@ -28,7 +31,7 @@ const Contacts = () => {
         { telephone && (
           //TODO: trim telephone
           <tr
-            onClick={ () => bubbleMessage(onlyNumbers(telephone)) }
+            onClick={ () => copyNumber() }
             className="contact"
           >
             <td className={ ct }>Telephone</td>
