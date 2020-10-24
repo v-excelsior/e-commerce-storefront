@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// import { sortString } from '../helpers'
+// import { sortString } from 'helpers'
 
 export default class FireDB {
   constructor (http) {

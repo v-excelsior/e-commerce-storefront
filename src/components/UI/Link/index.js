@@ -3,7 +3,7 @@ import './style.scss'
 
 import { Link as RouteLink } from 'react-router-dom'
 
-import CONFIG from '../../../config'
+import CONFIG from 'config'
 
 const getClasses = (type, className) => {
   const classes = ['link']

@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.scss'
 
-import { Link } from '../../components/UI'
-import { onlyNumbers, bubbleMessage, copyToClipboard } from '../../helpers'
+import { Link } from 'components/UI'
+import { onlyNumbers, bubbleMessage, copyToClipboard } from 'helpers'
 
-import CONFIG from '../../config'
+import CONFIG from 'config'
 
 const Contacts = () => {
   const { otherContacts, address, telephone, email } = CONFIG.contacts

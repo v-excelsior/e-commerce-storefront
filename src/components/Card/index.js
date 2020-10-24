@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-import CONFIG from '../../config'
+import CONFIG from 'config'
 
 const Card = (props) => {
 

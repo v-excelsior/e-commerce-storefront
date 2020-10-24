@@ -3,7 +3,7 @@ import './style.scss'
 
 import Link from '../Link'
 
-import CONFIG from '../../../config'
+import CONFIG from 'config'
 
 const Header = () => {
 
