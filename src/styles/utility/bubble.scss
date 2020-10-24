@@ -1,10 +1,12 @@
+@import "src/styles/vars";
+
 .bubbling-overlay {
+  z-index: -1;
   position: fixed;
   width: 100vw;
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: green;
   transition: 3s;
 
   .bubble {
@@ -13,7 +15,7 @@
     bottom: 0;
     transform: translate(-50%, 150%);
     transition: 1s;
-    background-color: gray;
+    background-color: $main;
 
     &.bubbling {
       transform: translate(-50%, -150%);

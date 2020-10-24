@@ -7,9 +7,8 @@ const bubbleMessage = (message, delay = 2000) => {
 
   const bubble = document.createElement('div')
 
-  bubble.textContent = 'Copied!'
-
-  bubble.classList.add('bubble')
+  bubble.textContent = message
+  bubble.classList.add('bubble', 'shadow')
 
   bubblingOverlay.appendChild(bubble)
 
@@ -22,7 +21,7 @@ const bubbleMessage = (message, delay = 2000) => {
     bubble.addEventListener('transitionend', () => {
       bubblingOverlay.remove()
     })
-  }, 2000)
+  }, delay)
 }
 
 export default bubbleMessage
