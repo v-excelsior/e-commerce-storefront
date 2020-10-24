@@ -1,7 +1,5 @@
 const copyToClipboard = text => {
-
   const fakeInput = document.createElement('input')
-  fakeInput.style.display = 'none'
   fakeInput.value = text
 
   document.body.appendChild(fakeInput)
