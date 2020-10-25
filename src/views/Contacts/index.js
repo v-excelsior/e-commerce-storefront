@@ -5,7 +5,7 @@ import { Link } from 'components/UI'
 import { onlyNumbers, bubbleMessage, copyToClipboard } from 'helpers'
 
 import CONFIG from 'config'
-import dictionary from 'i18n'
+import d from 'i18n'
 
 const Contacts = () => {
   const { otherContacts, address, telephone, email } = CONFIG.contacts
@@ -15,7 +15,7 @@ const Contacts = () => {
 
   const copyNumber = () => {
     copyToClipboard(onlyNumbers(telephone))
-    bubbleMessage(dictionary.greeting)
+    bubbleMessage(d.copyMsg)
   }
 
   return (
@@ -30,12 +30,11 @@ const Contacts = () => {
         ) }
 
         { telephone && (
-          //TODO: trim telephone
           <tr
             onClick={ () => copyNumber() }
             className="contact"
           >
-            <td className={ ct }>Telephone</td>
+            <td className={ ct }>{d.telephone}</td>
             <td className={ cd + 'contact-data__telephone link' }>
               { telephone }
             </td>
@@ -44,7 +43,7 @@ const Contacts = () => {
 
         { address && (
           <tr className="contact">
-            <td className={ ct }>Address</td>
+            <td className={ ct }>{d.address}</td>
             <td className={ cd }>
               {/*  why link not opened with address?*/ }
               <Link href={ 'https://google.com/maps/search/' + address.replace(/\s/g, '+') }>
