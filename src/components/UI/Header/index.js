@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import './style.scss'
 
-import Link from '../Link'
+import { Link } from 'react-router-dom'
 
 import CONFIG from 'config'
 
@@ -17,7 +17,7 @@ const Header = () => {
           isMainPage
             ? CONFIG.appName
             : (
-              <Link to='/' type='block'>
+              <Link to='/' className='header-link'>
                 { CONFIG.appName }
               </Link>
             )
