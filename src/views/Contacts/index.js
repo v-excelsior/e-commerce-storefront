@@ -5,6 +5,7 @@ import { Link } from 'components/UI'
 import { onlyNumbers, bubbleMessage, copyToClipboard } from 'helpers'
 
 import CONFIG from 'config'
+import dictionary from 'i18n'
 
 const Contacts = () => {
   const { otherContacts, address, telephone, email } = CONFIG.contacts
@@ -14,7 +15,7 @@ const Contacts = () => {
 
   const copyNumber = () => {
     copyToClipboard(onlyNumbers(telephone))
-    bubbleMessage('d.copy')
+    bubbleMessage(dictionary.greeting)
   }
 
   return (
