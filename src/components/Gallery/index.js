@@ -32,11 +32,10 @@ const Gallery = () => {
   }, [cards, filter])
 
   return (
+    //TODO: eslint jsx only ordinary '
     <div className="cards-list">
-      <select onChange={ (e) => {
-        console.log(e.target.value)
-        setFilter(e.target.value)
-      } }>
+      <select onChange={ e => setFilter(e.target.value) }>
+        <option value='all'>ALL</option>
         {
           categories.map((category, i) => (
             <option value={ category } key={ i }>
