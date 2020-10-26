@@ -7,6 +7,8 @@ import { db } from 'services'
 
 const Gallery = () => {
   const [cards, setCards] = useState([])
+  const [filteredCards, setFilteredCards] = useState([])
+  const [filter, setFilter] = useState('')
 
   useEffect(() => {
     const fetchCards = async () => await db.getCards()
@@ -14,10 +16,14 @@ const Gallery = () => {
     fetchCards().then(setCards)
   }, [])
 
+  useEffect(() => {
+
+  }, [filter])
+
   return (
     <div className="cards-list">
       {
-        cards.map( (card, i) => ( <Card { ...card } key={ i }/> ))
+        cards.map((card, i) => (<Card { ...card } key={ i } />))
       }
     </div>
   )
