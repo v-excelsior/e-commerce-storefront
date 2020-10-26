@@ -10,15 +10,20 @@ export default class FireDB {
 
   async getCards () {
     const cards = []
+    const categories = []
 
     await axios.get(this.full_http).then(res => {
       Object.keys(res.data).forEach(key => {
+        categories.push(res.data[key].category)
         cards.push({ id: key, ...res.data[key] })
       })
     })
 
     //TODO: return sorted data
-    return cards
+    return {
+      cards,
+      categories: [...new Set(categories)],
+    }
   }
 
   async addCard (card) {
