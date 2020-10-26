@@ -1,11 +1,15 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 import './style.scss'
 
-import { Link } from 'react-router-dom'
-
 import CONFIG from 'config'
+
+const renderHeaderLink = () => (
+  <Link to='/' className='header-link'>
+    { CONFIG.appName }
+  </Link>
+)
 
 const Header = () => {
   const isMainPage = useLocation().pathname === '/'
@@ -16,11 +20,7 @@ const Header = () => {
         {
           isMainPage
             ? CONFIG.appName
-            : (
-              <Link to='/' className='header-link'>
-                { CONFIG.appName }
-              </Link>
-            )
+            : renderHeaderLink()
         }
       </div>
     </header>
