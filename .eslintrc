@@ -15,6 +15,7 @@
     "no-unused-vars": "error",
     "no-multi-spaces": "error",
     "semi": ["error", "never"],
+    "jsx-quotes": ["error", "prefer-single"],
     "comma-dangle": ["error", "always-multiline"],
     "object-curly-spacing": ["error", "always"],
     "quotes": ["error", "single", "avoid-escape"],
