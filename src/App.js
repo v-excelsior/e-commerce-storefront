@@ -7,10 +7,10 @@ import routes from './routes'
 
 const App = () => {
   return (
-    <div className="app">
+    <div className='app'>
       <Router>
       <Header />
-        <div className="container">
+        <div className='container'>
           <Switch>
             {
               routes.map((route, i) => {

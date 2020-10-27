@@ -15,8 +15,8 @@ const Header = () => {
   const isMainPage = useLocation().pathname === '/'
 
   return (
-    <header className="header">
-      <div className="header-company-name">
+    <header className='header'>
+      <div className='header-company-name'>
         {
           isMainPage
             ? CONFIG.appName

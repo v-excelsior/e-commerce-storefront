@@ -27,7 +27,7 @@ const Link = (props) => {
     if (to) {
       return (
         <RouteLink
-          exact="true"
+          exact='true'
           to={ to }
           className={ getClasses(type, className) }
         >
@@ -40,8 +40,8 @@ const Link = (props) => {
       return (
         <a
           href={ `mailto:${ CONFIG.contacts.email }` }
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           className={ getClasses(type, className) }
         >
           { props.children || CONFIG.contacts.email }
@@ -53,8 +53,8 @@ const Link = (props) => {
       return (
         <a
           href={ href }
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           className={ getClasses(type, className) }
         >
           { props.children || href }

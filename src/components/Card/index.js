@@ -8,25 +8,25 @@ const Card = (props) => {
   const { name, imageUrl, price, description } = props
 
   return (
-    <div className="card">
-      <div className="card-head">
-         <span className="card-label card-label__name">
+    <div className='card'>
+      <div className='card-head'>
+         <span className='card-label card-label__name'>
            { name }
          </span>
 
         <img
-          className="card-image"
+          className='card-image'
           src={ imageUrl }
           alt={ name }
         />
 
-        <span className="card-label card-label__price">
+        <span className='card-label card-label__price'>
          { `${ price } ${ CONFIG.currency }` }
         </span>
       </div>
 
       { description && (
-        <span className="card-description">
+        <span className='card-description'>
           { description }
         </span>
       ) }

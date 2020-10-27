@@ -19,11 +19,11 @@ const Contacts = () => {
   }
 
   return (
-    <div className="contacts">
-      <table className="contacts-table">
+    <div className='contacts'>
+      <table className='contacts-table'>
         <tbody>
         { email && (
-          <tr className="contact">
+          <tr className='contact'>
             <td className={ ct }>Email</td>
             <td className={ cd }><Link email /></td>
           </tr>
@@ -32,7 +32,7 @@ const Contacts = () => {
         { telephone && (
           <tr
             onClick={ () => copyNumber() }
-            className="contact"
+            className='contact'
           >
             <td className={ ct }>{d.telephone}</td>
             <td className={ cd + 'contact-data__telephone link' }>
@@ -42,7 +42,7 @@ const Contacts = () => {
         ) }
 
         { address && (
-          <tr className="contact">
+          <tr className='contact'>
             <td className={ ct }>{d.address}</td>
             <td className={ cd }>
               {/*  why link not opened with address?*/ }
@@ -55,7 +55,7 @@ const Contacts = () => {
 
         { otherContacts?.length && otherContacts.map(
           (contact, i) => (
-            <tr className="contact" key={ i }>
+            <tr className='contact' key={ i }>
               <td className={ ct }>{ contact.type }</td>
               <td className={ cd }>{ contact.data }</td>
             </tr>
