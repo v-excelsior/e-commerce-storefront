@@ -9,15 +9,12 @@
   outline: $main;
   border-radius: 4px;
   border: none;
-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
 
   &:hover {
-    box-shadow:$material-shadow-small;
+    box-shadow: $material-shadow-small;
   }
-}
-
-.vx-select option {
-  color: white;
 }
 
 select:focus > option:checked, option:not(:checked) {
