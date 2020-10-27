@@ -31,7 +31,6 @@ const Gallery = () => {
   }, [cards, filter])
 
   return (
-    //TODO: eslint jsx only ordinary '
     <div className='gallery'>
 
       <Select
@@ -46,7 +45,6 @@ const Gallery = () => {
       {/*  ) }*/ }
       {/*</div>*/ }
     </div>
-
   )
 }
 

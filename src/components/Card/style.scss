@@ -7,7 +7,7 @@
   margin: 12px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: $material-shadow;
+  box-shadow: $material-shadow-large;
 
   @include screen('max', $M) {
     margin: 9px;
