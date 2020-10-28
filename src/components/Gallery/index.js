@@ -11,25 +11,29 @@ const Gallery = () => {
   const [categories, setCategories] = useState([])
   const [filteredCards, setFilteredCards] = useState([])
   const [filter, setFilter] = useState('all')
+  const [sort, setSort] = useState('asc')
 
   useEffect(() => {
     const fetchCards = async () => await db.getCards()
 
     fetchCards().then(res => {
+      console.log(res.cards)
       setCards(res.cards)
       setCategories(res.categories)
     })
   }, [])
 
   useEffect(() => {
-    if (filter === 'all') {
-      setFilteredCards(cards)
-    } else {
-      setFilteredCards(cards.filter(card => {
-        return card.category === filter
-      }))
-    }
+    filter === 'all'
+      ? setFilteredCards(cards)
+      : setFilteredCards(cards.filter(card => card.category === filter))
   }, [cards, filter])
+
+  useEffect(() => {
+    sort === 'asc'
+      ? setFilteredCards(cards.sort())
+      : setFilteredCards(cards.sort().reverse)
+  }, [sort])
 
   return (
     <div className='gallery'>
@@ -43,10 +47,8 @@ const Gallery = () => {
 
         <Sort
           label='x'
-          onDesc={ () => {
-          } }
-          onAsc={ () => {
-          } }
+          onDesc={ () => setSort('asc') }
+          onAsc={ () => setSort('desc') }
         />
       </div>
 
