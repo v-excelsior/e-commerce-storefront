@@ -4,7 +4,7 @@ import './style.scss'
 import { db } from 'services'
 
 import { Select } from 'components/UI'
-import { Card } from 'components'
+import { Card, Sort } from 'components'
 
 const Gallery = () => {
   const [cards, setCards] = useState([])
@@ -39,6 +39,14 @@ const Gallery = () => {
           options={ categories.map(v => ({ value: v, label: v })) }
           onChange={ e => setFilter(e.target.value) }
           withAll
+        />
+
+        <Sort
+          label='x'
+          onDesc={ () => {
+          } }
+          onAsc={ () => {
+          } }
         />
       </div>
 
