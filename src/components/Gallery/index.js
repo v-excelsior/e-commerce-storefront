@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 
 import { db } from 'services'
+import { sortObjByProp } from 'helpers'
 
 import { Select } from 'components/UI'
 import { Card, Sort } from 'components'
+
+const sortByName = sortObjByProp('name')
 
 const Gallery = () => {
   const [cards, setCards] = useState([])
@@ -30,9 +33,11 @@ const Gallery = () => {
   }, [cards, filter])
 
   useEffect(() => {
+    console.log(sort)
     sort === 'asc'
-      ? setFilteredCards(cards.sort(el => el.name))
-      : setFilteredCards(cards.sort().reverse)
+      ? setFilteredCards(cards.sort(sortByName))
+      : setFilteredCards(cards.sort(sortByName).reverse())
+
   }, [sort])
 
   return (
