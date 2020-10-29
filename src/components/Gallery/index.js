@@ -3,11 +3,13 @@ import './style.scss'
 
 import { db } from 'services'
 import { sortObjByProp } from 'helpers'
+import d from 'i18n'
 
 import { Select } from 'components/UI'
 import { Card, Sort } from 'components'
 
 const sortByName = sortObjByProp('name')
+const sortByPrice = sortObjByProp('price')
 
 const Gallery = () => {
   const [cards, setCards] = useState([])
@@ -20,7 +22,6 @@ const Gallery = () => {
     const fetchCards = async () => await db.getCards()
 
     fetchCards().then(res => {
-      console.log(res.cards)
       setCards(res.cards)
       setCategories(res.categories)
     })
@@ -33,11 +34,17 @@ const Gallery = () => {
   }, [cards, filter])
 
   useEffect(() => {
-    console.log(sort)
-    sort === 'asc'
-      ? setFilteredCards(cards.sort(sortByName))
-      : setFilteredCards(cards.sort(sortByName).reverse())
+    if (sort.startsWith('name')) {
+      sort.endsWith('asc')
+        ? setFilteredCards([...cards].sort(sortByName))
+        : setFilteredCards([...cards].sort(sortByName).reverse())
+    }
 
+    if (sort.startsWith('price')) {
+      sort.endsWith('asc')
+        ? setFilteredCards([...cards].sort(sortByPrice))
+        : setFilteredCards([...cards].sort(sortByPrice).reverse())
+    }
   }, [sort])
 
   return (
@@ -51,9 +58,21 @@ const Gallery = () => {
         />
 
         <Sort
-          label='x'
-          onDesc={ () => setSort('asc') }
-          onAsc={ () => setSort('desc') }
+          label={ d.name }
+          onDesc={ () => {
+            console.log(filteredCards)
+            setSort('name_asc')
+          } }
+          onAsc={ () => setSort('name_desc') }
+        />
+
+        <Sort
+          label={ d.price }
+          onDesc={ () => {
+            setSort('price_asc')
+            console.log(filteredCards)
+          } }
+          onAsc={ () => setSort('price_desc') }
         />
       </div>
 

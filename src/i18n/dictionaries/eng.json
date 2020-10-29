@@ -1,5 +1,7 @@
 {
   "copyMsg": "Copied :)",
   "address": "Address",
-  "telephone": "Telephone"
+  "telephone": "Telephone",
+  "price": "Price",
+  "name": "Name"
 }
