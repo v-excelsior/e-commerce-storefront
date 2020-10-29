@@ -31,7 +31,7 @@ const Gallery = () => {
 
   useEffect(() => {
     sort === 'asc'
-      ? setFilteredCards(cards.sort())
+      ? setFilteredCards(cards.sort(el => el.name))
       : setFilteredCards(cards.sort().reverse)
   }, [sort])
 
