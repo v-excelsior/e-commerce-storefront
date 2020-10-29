@@ -60,7 +60,6 @@ const Gallery = () => {
         <Sort
           label={ d.name }
           onDesc={ () => {
-            console.log(filteredCards)
             setSort('name_asc')
           } }
           onAsc={ () => setSort('name_desc') }
@@ -70,7 +69,6 @@ const Gallery = () => {
           label={ d.price }
           onDesc={ () => {
             setSort('price_asc')
-            console.log(filteredCards)
           } }
           onAsc={ () => setSort('price_desc') }
         />
