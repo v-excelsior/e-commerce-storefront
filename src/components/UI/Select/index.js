@@ -7,7 +7,7 @@ const Select = (props) => {
   const { onChange, options, withAll } = props
 
   return (
-    <select onChange={ onChange } className='vx-select'>
+    <select onChange={ onChange } className='select'>
       { withAll && <option value='all'>{ d.all.toUpperCase() }</option> }
       { options.map((option, i) => (
         <option value={ option.value } key={ i }>

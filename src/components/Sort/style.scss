@@ -1,6 +1,23 @@
-button {
-  height:20px;
-  img{
-    height:100%
+@import 'src/styles/vars';
+
+.sort {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 4px;
+  color: white;
+  background-color: $main;
+  transition: 0.2s;
+
+  &-label{
+    display: block;
+    padding: 6px 12px;
+    margin-right: 10px;
+  }
+
+  .button-sort{
+    width: 36px;
+    border: 0;
+    outline-color: $main;
   }
 }

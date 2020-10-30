@@ -49,8 +49,7 @@ const Gallery = () => {
 
   return (
     <div className='gallery'>
-
-      <div>
+      <div className='controls'>
         <Select
           options={ categories.map(v => ({ value: v, label: v })) }
           onChange={ e => setFilter(e.target.value) }
@@ -59,21 +58,16 @@ const Gallery = () => {
 
         <Sort
           label={ d.name }
-          onDesc={ () => {
-            setSort('name_asc')
-          } }
+          onDesc={ () => setSort('name_asc') }
           onAsc={ () => setSort('name_desc') }
         />
 
         <Sort
           label={ d.price }
-          onDesc={ () => {
-            setSort('price_asc')
-          } }
+          onDesc={ () => setSort('price_asc') }
           onAsc={ () => setSort('price_desc') }
         />
       </div>
-
 
       <div className='cards-list'>
         { filteredCards.map((card, i) => (

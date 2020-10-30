@@ -1,6 +1,13 @@
 @import "src/styles/vars";
 @import "src/styles/mixins/media";
 
+.gallery {
+  .controls {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .cards-list {
   display: grid;
   align-items: flex-start;

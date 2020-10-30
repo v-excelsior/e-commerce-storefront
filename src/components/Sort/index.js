@@ -15,12 +15,18 @@ const Sort = (props) => {
         </span>
       ) }
 
-      <button onClick={ onAsc }>
-        <img src={ arrow } alt='ascending btn' />
+      <button
+        onClick={ onAsc }
+        className='button button-sort button-ascending'
+      >
+        <img src={ arrow } className='arrow' alt='ascending btn' />
       </button>
 
-      <button onClick={ onDesc }>
-        <img src={ arrow } alt='descending btn' />
+      <button
+        onClick={ onDesc }
+        className='button button-sort button-descending'
+      >
+        <img src={ arrow } className='arrow-down' alt='descending btn' />
       </button>
     </div>
   )
