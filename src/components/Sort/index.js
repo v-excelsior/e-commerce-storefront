@@ -19,14 +19,14 @@ const Sort = (props) => {
         onClick={ onAsc }
         className='button button-sort button-ascending'
       >
-        <Arrow/>
+        <Arrow className='button-sort-icon'/>
       </button>
 
       <button
         onClick={ onDesc }
         className='button button-sort button-descending'
-      >        <Arrow/>
-
+      >
+        <Arrow className='button-sort-icon'/>
       </button>
     </div>
   )
