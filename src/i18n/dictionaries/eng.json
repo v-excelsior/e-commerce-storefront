@@ -3,5 +3,6 @@
   "address": "Address",
   "telephone": "Telephone",
   "price": "Price",
-  "name": "Name"
+  "name": "Name",
+  "all": "All"
 }
