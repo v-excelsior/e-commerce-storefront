@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-import { arrow } from 'components/UI/icons-base64'
+const arrow = require('assets/icons/arrow.svg')
 
 const Sort = (props) => {
 
@@ -19,14 +19,18 @@ const Sort = (props) => {
         onClick={ onAsc }
         className='button button-sort button-ascending'
       >
-        <img src={ arrow } className='arrow' alt='ascending btn' />
+        <svg className='arrow' alt='ascending btn' >
+          <use xlinkHref={ arrow }></use>
+        </svg>
       </button>
 
       <button
         onClick={ onDesc }
         className='button button-sort button-descending'
       >
-        <img src={ arrow } className='arrow-down' alt='descending btn' />
+        <svg className='arrow-down' alt='descending btn' >
+          <use xlinkHref={ arrow }></use>
+        </svg>
       </button>
     </div>
   )
