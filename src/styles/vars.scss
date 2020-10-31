@@ -1,6 +1,8 @@
 //Color schema
 $primary: #4CAF50;
-$secondary:whitesmoke;
+$secondary: whitesmoke;
+
+$accent: #ffab00;
 
 $primary-light: lighten($primary, 10%);
 $primary-dark: darken($primary, 10%);
