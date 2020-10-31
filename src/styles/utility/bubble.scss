@@ -17,8 +17,8 @@
     border-radius: 6px;
     transform: translate(-50%, 150%);
     transition: 1s;
-    color:$text-secondary;
-    background-color: $main;
+    color:$text-on-primary;
+    background-color: $primary;
 
     &.bubbling {
       transform: translate(-50%, -100%);

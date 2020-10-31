@@ -2,11 +2,11 @@
 @import 'src/styles/mixins/media';
 
 .header {
-  background-color: $main;
+  background-color: $primary;
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  color: $text-secondary;
+  color: $text-on-primary;
 
   &-company-name {
     font-size: 28px;
@@ -20,5 +20,9 @@
   &-link {
     color: inherit;
     text-decoration: none;
+
+    &:hover{
+      color: $text-on-primary-dark;
+    }
   }
 }

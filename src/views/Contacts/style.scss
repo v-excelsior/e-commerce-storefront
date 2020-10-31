@@ -30,7 +30,7 @@
   &-cell {
     border-radius: 6px;
     border-spacing: 30px;
-    border: 2px solid $main;
+    border: 2px solid $primary;
     padding: 10px;
 
     @include screen('max', $M) {
@@ -47,7 +47,7 @@
   }
 
   .contact-type {
-    background-color: $main;
+    background-color: $primary;
     text-align: center;
     color:#FFF;
     width: 30%;

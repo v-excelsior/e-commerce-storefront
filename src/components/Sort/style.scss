@@ -6,10 +6,11 @@
   font-size: 18px;
   border-radius: 4px;
   color: white;
-  background-color: $main;
+  background-color: $primary;
   transition: 0.2s;
+  overflow: hidden;
 
-  &-label{
+  &-label {
     display: block;
     padding: 6px 12px;
   }
@@ -19,11 +20,20 @@
     padding: 0 8px;
     border: 0;
     color: white;
-    background-color: $main;
-    outline-color: $main;
+    background-color: $primary;
+    outline: none;
+    fill: $text-on-primary;
+
+    &:focus {
+      fill: $text-on-primary-dark;
+    }
   }
 
   .button-ascending {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
+  }
+
+  .button-descending {
+    transform: rotate(-90deg);
   }
 }

@@ -3,9 +3,9 @@
 .select {
   font-size: 18px;
   color: white;
-  background-color: $main;
+  background-color: $primary;
   padding: 6px 12px;
-  outline-color: $main;
+  outline-color: $primary-dark;
   border-radius: 4px;
   border: none;
   transition: 0.2s;
@@ -16,5 +16,5 @@
 }
 
 select:focus > option:checked, option:not(:checked) {
-  background-color: $main-light;
+  background-color: $primary-light;
 }

@@ -1,11 +1,17 @@
 //Color schema
-$main: #4CAF50;
+$primary: #4CAF50;
+$secondary:whitesmoke;
 
-$main-light: lighten($main, 10%);
-$main-dark: darken($main, 10%);
+$primary-light: lighten($primary, 10%);
+$primary-dark: darken($primary, 10%);
 
-$text-primary: black;
-$text-secondary: whitesmoke;
+$text-on-primary: whitesmoke;
+$text-on-primary-dark: darken($text-on-primary, 10%);
+$text-on-primary-light: lighten($text-on-primary, 10%);
+
+$text-on-secondary: $primary;
+$text-on-secondary-dark: darken($text-on-secondary, 10%);
+$text-on-secondary-light: lighten($text-on-secondary, 10%);
 
 //Media breakpoints
 $S: 480px;

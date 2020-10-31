@@ -2,23 +2,23 @@
 
 .link {
   transition: 0.2s;
-  color: $main;
+  color: $primary;
   cursor: pointer;
   text-decoration: underline;
 
   &:hover {
-    color: $main-dark;
+    color: $primary-dark;
   }
 
   &-block {
     color: #FFF;
-    background-color: $main;
+    background-color: $primary;
     text-decoration: none;
     border-radius: 3px;
     padding: 3px 6px;
 
     &:hover {
-      color: #DDD;
+      color: black;
     }
   }
 }
