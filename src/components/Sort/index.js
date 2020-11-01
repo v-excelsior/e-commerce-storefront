@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-import { ReactComponent as Arrow } from 'assets/icons/arrow.svg'
+import { ReactComponent as Arrow } from 'assets/icons/arrow-right.svg'
 
 const Sort = (props) => {
 
