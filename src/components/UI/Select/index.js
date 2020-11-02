@@ -8,10 +8,10 @@ const Select = (props) => {
 
   return (
     <select onChange={ onChange } className='select'>
-      { withAll && <option value='all'>{ d.all.toUpperCase() }</option> }
+      { withAll && <option value='all'>{ d.all }</option> }
       { options.map((option, i) => (
         <option value={ option.value } key={ i }>
-          { option.label.toUpperCase() }
+          { option.label }
         </option>
       )) }
     </select>
