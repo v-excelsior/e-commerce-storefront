@@ -69,6 +69,26 @@
   }
 
   &-description{
+    font-size: 14px;
+    line-height: 1.15;
+    height: 60px;
+    overflow-y:auto;
+    margin: 6px;
+    padding: 0 6px;
+    text-align: justify;
+
+    @include screen('max', $M) {
+      font-size: 12px;
+      margin: 4px;
+      padding:0 4px;
+    }
+
+    @include screen('max', $S) {
+      font-size: 10px;
+      margin: 3px;
+      padding:0 3px;
+    }
+
     &::-webkit-scrollbar {
       width: 4px;
       border-radius: 2px;
@@ -87,28 +107,6 @@
 
     &::-webkit-scrollbar-thumb:hover {
       background: $primary-dark;
-    }
-
-    font-size: 14px;
-    line-height: 1.15;
-    height: 60px;
-    overflow-y:auto;
-    margin: 6px;
-    padding: 0 6px;
-    text-align: justify;
-
-    @include screen('max', $M) {
-      font-size: 12px;
-      height: 40px;
-      margin: 4px;
-      padding:0 4px;
-    }
-
-    @include screen('max', $S) {
-      font-size: 10px;
-      height: 30px;
-      margin: 3px;
-      padding:0 3px;
     }
   }
 
