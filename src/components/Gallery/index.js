@@ -45,7 +45,7 @@ const Gallery = () => {
         ? setFilteredCards([...cards].sort(sortByPrice))
         : setFilteredCards([...cards].sort(sortByPrice).reverse())
     }
-  }, [sort])
+  }, [sort, cards])
 
   return (
     <div className='gallery'>
