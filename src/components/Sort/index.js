@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-import { ReactComponent as Arrow } from 'assets/icons/arrow-right.svg'
+import { ReactComponent as ArrowIcon } from 'assets/icons/arrow-right.svg'
 
 const Sort = (props) => {
 
@@ -19,14 +19,14 @@ const Sort = (props) => {
         onClick={ onAsc }
         className='button button-sort button-ascending'
       >
-        <Arrow className='button-sort-icon'/>
+        <ArrowIcon className='button-sort-icon'/>
       </button>
 
       <button
         onClick={ onDesc }
         className='button button-sort button-descending'
       >
-        <Arrow className='button-sort-icon'/>
+        <ArrowIcon className='button-sort-icon'/>
       </button>
     </div>
   )

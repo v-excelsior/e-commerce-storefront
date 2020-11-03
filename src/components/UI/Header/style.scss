@@ -5,8 +5,27 @@
   background-color: $primary;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
   color: $text-on-primary;
+
+  .container {
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  .button-menu {
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    outline: $primary;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 
   &-company-name {
     font-size: 28px;

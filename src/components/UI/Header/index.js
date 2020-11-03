@@ -5,6 +5,8 @@ import './style.scss'
 
 import CONFIG from 'config'
 
+import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
+
 const renderHeaderLink = () => (
   <Link to='/' className='header-link'>
     { CONFIG.appName }
@@ -16,12 +18,16 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <div className='header-company-name'>
+      <div className='header-company-name container'>
         {
           isMainPage
             ? CONFIG.appName
             : renderHeaderLink()
         }
+
+        <button className='button button-menu'>
+          <MenuIcon />
+        </button>
       </div>
     </header>
   )
