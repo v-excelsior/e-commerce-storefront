@@ -5,7 +5,7 @@ import './style.scss'
 
 import CONFIG from 'config'
 
-import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
+import { MenuButton } from 'components'
 
 const renderHeaderLink = () => (
   <Link to='/' className='header-link'>
@@ -25,9 +25,7 @@ const Header = () => {
             : renderHeaderLink()
         }
 
-        <button className='button button-menu'>
-          <MenuIcon />
-        </button>
+        <MenuButton/>
       </div>
     </header>
   )
