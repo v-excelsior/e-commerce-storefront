@@ -12,6 +12,14 @@
     & > * {
       flex: 1 1 auto;
     }
+
+    @include screen('max', $M) {
+      margin: 10px 10px 5px;
+    }
+
+    @include screen('max', $S) {
+      margin: 10px 5px 5px;
+    }
   }
 }
 

@@ -1,11 +1,11 @@
 import Sort from './Sort'
 import Card from './Card'
 import Gallery from './Gallery'
-import MenuButton from './MenuButton'
+import Menu from './Menu'
 
 export {
   Sort,
   Card,
   Gallery,
-  MenuButton,
+  Menu,
 }

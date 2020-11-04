@@ -31,6 +31,10 @@
         fill: $accent;
       }
     }
+
+    @include screen('max', $M) {
+      width: 20px;
+    }
   }
 
   &-company-name {

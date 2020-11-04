@@ -5,7 +5,7 @@ import './style.scss'
 
 import CONFIG from 'config'
 
-import { MenuButton } from 'components'
+import { Menu } from 'components'
 
 const renderHeaderLink = () => (
   <Link to='/' className='header-link'>
@@ -25,7 +25,7 @@ const Header = () => {
             : renderHeaderLink()
         }
 
-        <MenuButton/>
+        <Menu/>
       </div>
     </header>
   )
