@@ -23,14 +23,15 @@
     color: white;
     background-color: $primary;
     outline: none;
+    transition: 0.2s;
     fill: $text-on-primary;
 
     &:focus {
-      fill: $primary-dark;
+      fill: $accent;
     }
 
     &:hover {
-      fill: $primary-dark;
+      fill: $accent;
     }
   }
 

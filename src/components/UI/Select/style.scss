@@ -6,7 +6,7 @@
   text-transform: uppercase;
   padding: 6px 12px;
   appearance: none;
-  outline-color: $primary-dark;
+  outline: none;
   border-radius: 4px;
   border: none;
   transition: 0.2s;
@@ -18,7 +18,7 @@
   background-size: auto 60%;
 
   &:hover {
-    box-shadow: $material-shadow-small;
+    box-shadow: $material-shadow-large;
   }
 }
 
