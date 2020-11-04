@@ -15,28 +15,6 @@
     justify-content: space-between;
   }
 
-  .button-menu {
-    width: 30px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: $primary;
-
-    .icon-menu {
-      transition: 0.2s;
-    }
-
-    &:hover {
-      .icon-menu {
-        fill: $accent;
-      }
-    }
-
-    @include screen('max', $M) {
-      width: 20px;
-    }
-  }
-
   &-company-name {
     font-size: 28px;
     font-weight: bold;

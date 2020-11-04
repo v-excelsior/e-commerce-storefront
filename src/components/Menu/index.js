@@ -1,29 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 
 import './style.scss'
 
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
 
 const Menu = () => {
-  const [isMenuShown, setIsMenuShown] = useState(false)
+  const menuRef = useRef(null)
+
+  const toggleMenuVisibility = () => {
+    menuRef.current.classList.toggle('menu-body-open')
+  }
 
   return (
     <div className='menu'>
-      <button className='button button-menu' onClick={ () => {
-        setIsMenuShown(!isMenuShown)
-      } }>
+      <button
+        className='button button-menu'
+        onClick={ () => toggleMenuVisibility() }
+      >
         <MenuIcon className='icon-menu' />
       </button>
 
-      { isMenuShown && (
-        <div>
-          <ul>
-            <li>Menu</li>
-            <li>Not menu</li>
-            <li>Hello</li>
-          </ul>
-        </div>
-      ) }
+      <div className='menu-body' ref={ menuRef }>
+        <ul>
+          <li>Menu</li>
+          <li>Not menu</li>
+          <li>Hello</li>
+        </ul>
+      </div>
     </div>
   )
 }
