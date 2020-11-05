@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import './style.scss'
 
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
+import { Link } from 'components/UI'
 
 const Menu = () => {
   const menuRef = useRef(null)
@@ -21,11 +22,13 @@ const Menu = () => {
       </button>
 
       <div className='menu-body' ref={ menuRef }>
-        <ul>
-          <li>Menu</li>
-          <li>Not menu</li>
-          <li>Hello</li>
-        </ul>
+        <nav>
+          <ul>
+            <li>Menu</li>
+            <li>Not menu</li>
+            <li>Hello</li>
+          </ul>
+        </nav>
       </div>
     </div>
   )
