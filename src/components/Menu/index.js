@@ -4,6 +4,7 @@ import './style.scss'
 
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
 import { Link } from 'components/UI'
+import CONFIG from '../../config'
 
 const Menu = () => {
   const menuRef = useRef(null)
@@ -24,7 +25,11 @@ const Menu = () => {
       <div className='menu-body' ref={ menuRef }>
         <nav>
           <ul>
-            <li>Menu</li>
+            <li>
+              <Link to='/contacts' className='nav-link'>
+                Contacts
+              </Link>
+            </li>
             <li>Not menu</li>
             <li>Hello</li>
           </ul>
