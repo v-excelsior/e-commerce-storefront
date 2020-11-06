@@ -4,7 +4,6 @@ import './style.scss'
 
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
 import { Link } from 'components/UI'
-import CONFIG from '../../config'
 
 const Menu = () => {
   const menuRef = useRef(null)
