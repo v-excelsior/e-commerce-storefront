@@ -22,15 +22,23 @@ const Menu = () => {
       </button>
 
       <div className='menu-body' ref={ menuRef }>
-        <nav>
+        <nav className='menu-nav'>
           <ul>
             <li>
               <Link to='/contacts' className='nav-link'>
                 Contacts
               </Link>
             </li>
-            <li>Not menu</li>
-            <li>Hello</li>
+            <li>
+              <Link to='/contacts' className='nav-link'>
+                Test
+              </Link>
+            </li>
+            <li>
+              <Link to='/contacts' className='nav-link'>
+                Test looooong gugl werty rewty rerer kok sok jok
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
