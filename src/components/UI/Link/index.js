@@ -13,7 +13,7 @@ const getClasses = (type, className) => {
   }
 
   if (className?.length) {
-    classes.push(...className)
+    classes.push(className)
   }
 
   return classes.join(' ')

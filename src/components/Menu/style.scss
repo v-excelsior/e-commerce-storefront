@@ -29,13 +29,37 @@
 
   .menu-body {
     position: absolute;
-    top: -10px;
     z-index: 2;
-    transition: 0.3s;
-    background-color: $primary-dark;
-    right: 0;
-    transform: translateY(-100%);
+    top: -10px;
     padding: 10px;
+    right: 0;
+    transition: 0.3s;
+    background-color: $primary;
+
+    border: 2px solid $primary-dark;
+    border-top: none;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    transform: translateY(-100%);
+  }
+
+  .menu-nav {
+    padding-right: 75px;
+    color: $text-on-primary;
+
+    .nav-list {
+      list-style: none;
+    }
+
+    .nav-link {
+      color: $text-on-primary;
+      text-decoration: none;
+
+      &:hover{
+        color: $text-on-primary-dark;
+      }
+    }
   }
 
   .menu-body-open {
