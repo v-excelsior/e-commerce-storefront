@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import './style.scss'
 
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg'
+import { ReactComponent as CrossIcon } from 'assets/icons/cross.svg'
 import { Link } from 'components/UI'
 
 const Menu = () => {
@@ -16,9 +17,9 @@ const Menu = () => {
     <div className='menu'>
       <button
         className='button button-menu'
-        onClick={ () => toggleMenuVisibility() }
+        onClick={ toggleMenuVisibility }
       >
-        <MenuIcon className='icon-menu' />
+        <MenuIcon className='icon-menu icon-menu--open' />
       </button>
 
       <div className='menu-body' ref={ menuRef }>
@@ -41,6 +42,13 @@ const Menu = () => {
             </li>
           </ul>
         </nav>
+
+        <button
+          className='button button-menu button-menu--close'
+          onClick={ toggleMenuVisibility }
+        >
+          <CrossIcon className='icon-menu icon-menu--close' />
+        </button>
       </div>
     </div>
   )

@@ -6,7 +6,6 @@
 
   .button-menu {
     width: 30px;
-    z-index: 3;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -14,6 +13,14 @@
 
     .icon-menu {
       transition: 0.2s;
+      fill: $secondary;
+
+      &--close {
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+      }
     }
 
     &:hover {
