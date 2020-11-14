@@ -36,14 +36,14 @@ const Gallery = () => {
   useEffect(() => {
     if (sort.startsWith('name')) {
       sort.endsWith('asc')
-        ? setFilteredCards([...cards].sort(sortByName))
-        : setFilteredCards([...cards].sort(sortByName).reverse())
+        ? setFilteredCards([...filteredCards].sort(sortByName))
+        : setFilteredCards([...filteredCards].sort(sortByName).reverse())
     }
 
     if (sort.startsWith('price')) {
       sort.endsWith('asc')
-        ? setFilteredCards([...cards].sort(sortByPrice))
-        : setFilteredCards([...cards].sort(sortByPrice).reverse())
+        ? setFilteredCards([...filteredCards].sort(sortByPrice))
+        : setFilteredCards([...filteredCards].sort(sortByPrice).reverse())
     }
   }, [sort, cards])
 
