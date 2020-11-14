@@ -26,18 +26,13 @@ const Menu = () => {
         <nav className='menu-nav'>
           <ul className='nav-list'>
             <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
+              <Link to='/' className='nav-link'>
+                Home
+              </Link>
+            </li>
+            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
               <Link to='/contacts' className='nav-link'>
                 Contacts
-              </Link>
-            </li>
-            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
-              <Link to='/contacts' className='nav-link'>
-                Test
-              </Link>
-            </li>
-            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
-              <Link to='/contacts' className='nav-link'>
-                Test looooong
               </Link>
             </li>
           </ul>

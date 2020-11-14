@@ -67,9 +67,31 @@
     .nav-link {
       color: $text-on-primary;
       text-decoration: none;
+      position: relative;
 
-      &:hover{
-        color: $text-on-primary-dark;
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 0;
+        background-color: $text-on-primary;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+
+      }
+    }
+
+    .active-link {
+      color: $accent;
+
+      &:after {
+        background-color: $accent;
       }
     }
   }
