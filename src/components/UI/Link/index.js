@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-import { Link as RouteLink } from 'react-router-dom'
+import { NavLink as RouteLink } from 'react-router-dom'
 
 import CONFIG from 'config'
 
@@ -27,9 +27,10 @@ const Link = (props) => {
     if (to) {
       return (
         <RouteLink
-          exact='true'
+          exact
           to={ to }
           className={ getClasses(type, className) }
+          activeClassName='active-link'
         >
           { props.children || to.replace(/\//, '') }
         </RouteLink>
