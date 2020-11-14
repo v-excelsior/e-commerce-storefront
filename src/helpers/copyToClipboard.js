@@ -1,15 +1,3 @@
-const copyToClipboard = text => {
-  const fakeInput = document.createElement('input')
-  fakeInput.value = text
-
-  document.body.appendChild(fakeInput)
-
-  fakeInput.select()
-  fakeInput.setSelectionRange(0, 99999)
-
-  document.execCommand('copy')
-
-  fakeInput.remove()
-}
+const copyToClipboard = text => window.navigator.clipboard.writeText(text)
 
 export default copyToClipboard
