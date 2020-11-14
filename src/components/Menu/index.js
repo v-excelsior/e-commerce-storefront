@@ -9,15 +9,15 @@ import { Link } from 'components/UI'
 const Menu = () => {
   const menuRef = useRef(null)
 
-  const toggleMenuVisibility = () => {
-    menuRef.current.classList.toggle('menu-body-open')
+  const toggleMenuVisibility = (isVisible) => {
+    menuRef.current.classList.toggle('menu-body-open', isVisible)
   }
 
   return (
     <div className='menu'>
       <button
         className='button button-menu'
-        onClick={ toggleMenuVisibility }
+        onClick={ () => toggleMenuVisibility(true) }
       >
         <MenuIcon className='icon-menu icon-menu--open' />
       </button>
@@ -25,19 +25,19 @@ const Menu = () => {
       <div className='menu-body' ref={ menuRef }>
         <nav className='menu-nav'>
           <ul className='nav-list'>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
               <Link to='/contacts' className='nav-link'>
                 Contacts
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
               <Link to='/contacts' className='nav-link'>
                 Test
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onClick={ () => toggleMenuVisibility(false) }>
               <Link to='/contacts' className='nav-link'>
-                Test looooong gugl werty rewty rerer kok sok jok
+                Test looooong
               </Link>
             </li>
           </ul>
@@ -45,7 +45,7 @@ const Menu = () => {
 
         <button
           className='button button-menu button-menu--close'
-          onClick={ toggleMenuVisibility }
+          onClick={ () => toggleMenuVisibility(false) }
         >
           <CrossIcon className='icon-menu icon-menu--close' />
         </button>

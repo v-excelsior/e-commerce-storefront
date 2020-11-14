@@ -11,13 +11,18 @@
     cursor: pointer;
     outline: $primary;
 
+    &--close {
+      position: absolute;
+      width: 24px;
+      right: 8px;
+      top: 8px;
+    }
+
     .icon-menu {
       transition: 0.2s;
       fill: $secondary;
 
       &--close {
-        position: absolute;
-
         left: 0;
         bottom: 0;
       }
@@ -52,7 +57,7 @@
   }
 
   .menu-nav {
-    padding-right: 65px;
+    padding-right: 40px;
     color: $text-on-primary;
 
     .nav-list {
